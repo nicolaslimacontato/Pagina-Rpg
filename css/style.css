@@ -1,0 +1,199 @@
+/* #region global */
+@font-face {
+    font-family: 'Merriweather';
+    src: url('../font/Merriweather.ttf');
+}
+
+@font-face {
+    font-family: 'Dnd';
+    src: url('../font/Dnd.otf');
+    ;
+}
+
+* {
+    font-family: 'Merriweather';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* rem */
+html {
+    font-size: 20px;
+}
+
+/* em */
+body {
+    font-size: 16px;
+}
+
+:root {
+    --color-title: rgb(150, 2, 2);
+    --color-text: aliceblue;
+    --color-default: black;
+    --color-background: white;
+    --color-primary: midnightblue;
+    --color-secundary: navy;
+    --color-tertiary: #b3d5e0;
+    --color-detail1: lime;
+    --color-detail2: orange;
+    --color-bg: rgba(0, 0, 0, .6);
+    --color-paragraph: rgba(255, 255, 255, .7);
+}
+
+:root {
+    --text-logo: 4em;
+    --text-superhero: 6em;
+    --text-title: 2em;
+    --text-subtitle: 1.2em;
+    --text-paragraph: 1em;
+    --text-anchor: 8em;
+    --text-icon: 2.5em;
+}
+
+h1 {
+    font-family: 'Dnd';
+    font-size: var(--text-title);
+    color: var(--color-title);
+}
+
+h2 {
+    font-size: var(--text-subtitle);
+
+}
+
+p {
+    font-size: var(--text-paragraph);
+
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+}
+
+/* #endregion */
+
+/* #region navbar */
+
+
+.menu {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    background-color: var(--color-default);
+    z-index: 99;
+}
+
+.menu ul {
+    display: flex;
+    margin: auto;
+}
+
+
+.menu li {
+    position: relative;
+    margin-right: 13em;
+    padding: 2em;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.menu a {
+    color: var(--color-background);
+    transition: .5s;
+}
+
+.menu li a i {
+    font-size: var(--text-icon);
+}
+
+.menu a:hover {
+    color: var(--color-title);
+    transition: .5s;
+}
+
+.menu li span {
+    position: absolute;
+    letter-spacing: .3em;
+    margin-top: .67em;
+    top: -4em;
+    opacity: 0;
+    transition: .6s;
+    text-align: center;
+}
+
+.menu li:hover span {
+    transition: .5s;
+    opacity: 1;
+    top: 2em;
+    color: var(--color-title);
+}
+
+.menu img {
+    max-width: 100%;
+    height: 4em;
+    margin-left: 5em;
+    transition: .5s;
+}
+
+.menu img:hover {
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+/* #endregion */
+
+/* #region home */
+#home {
+    background-image: url('../img/bghome.png');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.homeContainer {
+    width: 100%;
+    height: 100vh;
+    line-height: 100vh;
+    text-align: center;
+    background-color: var(--color-bg);
+}
+
+
+.homeContainer h1 {
+    font-size: var(--text-superhero);
+}
+
+
+/* #endregion */
+
+/* #region about */
+#about{
+    background-color: var(--color-pa);
+}
+
+.aboutContainer {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+}
+
+.aboutDnd img{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    text-align: left;
+    display: flex;
+}
+
+/* #endregion */
