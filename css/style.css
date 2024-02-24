@@ -22,6 +22,8 @@
 /* rem */
 html {
     font-size: 20px;
+    scroll-behavior: smooth;
+    background-color: var(--color-default);
 }
 
 /* em */
@@ -82,13 +84,13 @@ section {
 ::-webkit-scrollbar-thumb {
     background-color: var(--color-title);
     border-radius: 5em;
-    padding:  4px  0;
+    padding: 4px 0;
     cursor: -webkit-grab;
 }
 
 ::-webkit-scrollbar-button:vertical:decrement {
     background-image: url('/img/setascroll.png');
-    background-size:   1em   1em;
+    background-size: 1em 1em;
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
@@ -97,7 +99,7 @@ section {
 
 ::-webkit-scrollbar-button:vertical:increment {
     background-image: url('/img/setascrollbaixo.png');
-    background-size:   1em   1em;
+    background-size: 1em 1em;
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
@@ -106,245 +108,319 @@ section {
 
 /* #endregion */
 
-    /* #region navbar */
+/* #region navbar */
 
 
-    .menu {
-        position: fixed;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: row;
-        background-color: var(--color-default);
-        z-index: 99;
-    }
+.menu {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    background-color: var(--color-default);
+    z-index: 99;
+}
 
-    .menu ul {
-        display: flex;
-        margin: auto;
-    }
-
-
-    .menu li {
-        position: relative;
-        margin-right: 13em;
-        padding: 2em;
-    }
-
-    .menu a {
-        text-decoration: none;
-        color: var(--color-text);
-    }
-
-    .menu a {
-        color: var(--color-background);
-        transition: .5s;
-    }
-
-    .menu li a i {
-        font-size: var(--text-icon);
-    }
-
-    .menu a:hover {
-        color: var(--color-title);
-        transition: .5s;
-    }
-
-    .menu li span {
-        position: absolute;
-        letter-spacing: .3em;
-        margin-top: .67em;
-        top: -4em;
-        opacity: 0;
-        transition: .6s;
-        text-align: center;
-        padding: 0 2em;
-    }
-
-    .menu li:nth-child(2) span {
-        white-space: nowrap;
-    }
-
-    .menu li:hover span {
-        transition: .5s;
-        opacity: 1;
-        top: 2em;
-        color: var(--color-title);
-    }
-
-    .menu img {
-        max-width: 100%;
-        height: 4em;
-        margin-left: 5em;
-        transition: .5s;
-    }
-
-    .menu img:hover {
-        transform: scale(1.1);
-        transition: .5s;
-    }
-
-    /* #endregion */
-
-    /* #region home */
-    #home {
-        background-image: url('../img/bghome.png');
-        background-position: center;
-        background-size: cover;
-        background-attachment: fixed;
-    }
-
-    .homeContainer {
-        width: 100%;
-        height: 100vh;
-        line-height: 100vh;
-        text-align: center;
-        background-color: var(--color-bg);
-    }
+.menu ul {
+    display: flex;
+    margin: auto;
+}
 
 
-    .homeContainer h1 {
-        font-size: var(--text-superhero);
-    }
+.menu li {
+    position: relative;
+    margin-right: 13em;
+    padding: 2em;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.menu a {
+    color: var(--color-background);
+    transition: .5s;
+}
+
+.menu li a i {
+    font-size: var(--text-icon);
+}
+
+.menu a:hover {
+    color: var(--color-title);
+    transition: .5s;
+}
+
+.menu li span {
+    position: absolute;
+    letter-spacing: .3em;
+    margin-top: .67em;
+    top: -4em;
+    opacity: 0;
+    transition: .6s;
+    text-align: center;
+    padding: 0 2em;
+}
+
+.menu li:nth-child(2) span {
+    white-space: nowrap;
+}
+
+.menu li:hover span {
+    transition: .5s;
+    opacity: 1;
+    top: 2em;
+    color: var(--color-title);
+}
+
+.menu img {
+    max-width: 100%;
+    height: 4em;
+    margin-left: 5em;
+    transition: .5s;
+}
+
+.menu img:hover {
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+/* #endregion */
+
+/* #region home */
+#home {
+    background-image: url('../img/bghome.png');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.homeContainer {
+    width: 100%;
+    height: 100vh;
+    line-height: 100vh;
+    text-align: center;
+    background-color: var(--color-bg);
+}
 
 
-    /* #endregion */
-
-    /* #region about */
-
-    #about {
-        width: 100%;
-        height: 100vh;
-        padding: 2em;
-        background-color: var(--color-default);
-        text-align: center;
-        color: var(--color-text);
-        scroll-margin-top: 100px;
-        /* Ajuste este valor conforme necessário */
-        overflow: auto;
-    }
+.homeContainer h1 {
+    font-size: var(--text-superhero);
+}
 
 
-    .aboutContainer {
-        width: 100%;
-        height: 100vh;
-        display: flex;
-    }
+/* #endregion */
 
-    .aboutContainer h1 {
-        font-size: var(--text-icon);
-    }
+/* #region about */
 
-    .aboutDnd {
-        text-align: left;
-        /* Alinhar o texto à esquerda */
-        margin-right: auto;
-        /* Para colar à esquerda */
-        display: flex;
-        /* Utilizar flexbox para alinhar o conteúdo */
-        justify-content: center;
-        /* Centralizar o conteúdo horizontalmente */
-        width: 100%;
-        background-color: rgb(10, 10, 10);
-        border-radius: 2em;
-        padding: 2em;
-        margin: 2em 0;
-    }
+#about {
+    width: 100%;
+    height: 188vh;
+    padding: 2em;
+    background-color: var(--color-default);
+    text-align: center;
+    color: var(--color-text);
+    scroll-margin-top: 100px;
+}
 
+.aboutContainer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
 
-    .aboutDnd img {
-        width: 30%;
-        height: 30vh;
-        margin: 2em;
-        transition: .5s;
-    }
+.aboutContainer h1 {
+    font-size: var(--text-icon);
+}
 
-    .aboutDnd img:hover {
-        transform: scale(1.1);
-        transition: .5s;
-    }
-
-    .aboutDnd p {
-        margin: 2em;
-    }
-
-    .aboutLocalizacaoCampanha {
-        text-align: left;
-        /* Alinhar o texto à esquerda */
-        margin-right: auto;
-        /* Para colar à esquerda */
-        display: flex;
-        /* Utilizar flexbox para alinhar o conteúdo */
-        justify-content: center;
-        /* Centralizar o conteúdo horizontalmente */
-        align-items: center;
-        /* Centralizar itens verticalmente */
-        width: 100%;
-        background-color: rgb(10, 10, 10);
-        border-radius: 2em;
-        padding: 2em;
-        margin: 2em 0;
-    }
+.aboutDnd {
+    text-align: left;
+    /* Alinhar o texto à esquerda */
+    margin-right: auto;
+    /* Para colar à esquerda */
+    display: flex;
+    /* Utilizar flexbox para alinhar o conteúdo */
+    justify-content: center;
+    /* Centralizar o conteúdo horizontalmente */
+    width: 100%;
+    background-color: rgb(10, 10, 10);
+    border-radius: 2em;
+    padding: 2em;
+    margin: 2em 0;
+}
 
 
-    .aboutLocalizacaoCampanha img {
-        width: 30%;
-        height: 30vh;
-        transition: .5s;
-    }
+.aboutDnd img {
+    width: 30%;
+    height: 30vh;
+    margin: 2em;
+    transition: .5s;
+}
 
-    .aboutLocalizacaoCampanha img:hover {
-        transform: scale(1.1);
-        transition: .5s;
-    }
+.aboutDnd img:hover {
+    transform: scale(1.1);
+    transition: .5s;
+}
 
-    .aboutLocalizacaoCampanha p {
-        margin: 2em;
-        flex-grow: 1;
-        /* Permite que o parágrafo ocupe o espaço disponível */
-    }
+.aboutDnd p {
+    margin: 2em;
+}
 
-    .aboutLocalizacaoCampanha p a {
-        color: var(--color-title);
-    }
-
-    .aboutHistoriaCampanha {
-        text-align: left;
-        /* Alinhar o texto à esquerda */
-        margin-right: auto;
-        /* Para colar à esquerda */
-        display: flex;
-        /* Utilizar flexbox para alinhar o conteúdo */
-        justify-content: center;
-        /* Centralizar o conteúdo horizontalmente */
-        width: 100%;
-        background-color: rgb(10, 10, 10);
-        border-radius: 2em;
-        padding: 2em;
-        margin: 2em 0;
-    }
-
-    .aboutHistoriaCampanha img {
-        width: 30%;
-        height: 30vh;
-        margin: 2em;
-        transition: .5s;
-    }
-
-    .aboutHistoriaCampanha img:hover {
-        transform: scale(1.1);
-        transition: .5s;
-    }
-
-    .aboutHistoriaCampanha p {
-        margin: 5em 2em;
-    }
-
-    /* #endregion */
-
-    /* #region products */
+.aboutLocalizacaoCampanha {
+    text-align: left;
+    /* Alinhar o texto à esquerda */
+    margin-right: auto;
+    /* Para colar à esquerda */
+    display: flex;
+    /* Utilizar flexbox para alinhar o conteúdo */
+    justify-content: center;
+    /* Centralizar o conteúdo horizontalmente */
+    align-items: center;
+    /* Centralizar itens verticalmente */
+    width: 100%;
+    background-color: rgb(10, 10, 10);
+    border-radius: 2em;
+    padding: 2em;
+    margin: 2em 0;
+}
 
 
+.aboutLocalizacaoCampanha img {
+    width: 30%;
+    height: 30vh;
+    transition: .5s;
+}
 
-    /* #endregion */
+.aboutLocalizacaoCampanha img:hover {
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+.aboutLocalizacaoCampanha p {
+    margin: 2em;
+    flex-grow: 1;
+    /* Permite que o parágrafo ocupe o espaço disponível */
+}
+
+.aboutLocalizacaoCampanha p a {
+    color: var(--color-title);
+}
+
+.aboutHistoriaCampanha {
+    text-align: left;
+    /* Alinhar o texto à esquerda */
+    margin-right: auto;
+    /* Para colar à esquerda */
+    display: flex;
+    /* Utilizar flexbox para alinhar o conteúdo */
+    justify-content: center;
+    /* Centralizar o conteúdo horizontalmente */
+    width: 100%;
+    background-color: rgb(10, 10, 10);
+    border-radius: 2em;
+    padding: 2em;
+    margin: 2em 0;
+}
+
+.aboutHistoriaCampanha img {
+    width: 30%;
+    height: 30vh;
+    margin: 2em;
+    transition: .5s;
+}
+
+.aboutHistoriaCampanha img:hover {
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+.aboutHistoriaCampanha p {
+    margin: 5em 2em;
+}
+
+/* #endregion */
+
+/* #region products */
+
+#products {
+    width: 100%;
+    height: 90vh;
+    background-color: var(--color-default);
+    color: var(--color-text);
+    scroll-margin-top: 8em;
+}
+
+#products h1 {
+    font-size: var(--text-icon);
+}
+
+.productsContainer {
+    margin-top: 3em;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.card {
+    height: 70vh;
+    flex-basis: 20%;
+    background-color: rgb(10, 10, 10);
+    ;
+    text-align: center;
+}
+
+.card li p{
+    height: 250px;
+    background-color: var(--colorText);
+    color: var(--colorBase);
+   padding: 50px 40px;
+}
+
+.cardButton{
+    display: flex;
+    justify-content: center;
+    margin-top: 4em;
+    margin-right: 1em;
+}
+
+.card li button {
+    background-color: var(--color-background); 
+    color: rgb(0, 0, 0); 
+    padding: 1em 2em; 
+    border-radius: 25em; 
+}
+
+
+.card li img {
+    width:   100%; /* Define a largura da imagem para   100% do contêiner pai */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: cover; /* Ajusta a imagem para preencher o contêiner sem distorcer */
+    margin:   0; /* Remove qualquer margem */
+    padding:   0; /* Remove qualquer preenchimento */
+}
+
+/* #region imagens */
+#roll20{
+    width: 65%;
+}
+
+#discord{
+    margin-top: 2em;
+}
+
+#wikiDot{
+    width: 64%;
+}
+
+/* #endregion */
+
+.pDoValda{
+    margin-top: 2.9em;
+}
+
+
+/* #endregion */
