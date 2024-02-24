@@ -186,12 +186,14 @@ section {
 
 #about {
     width: 100%; 
-    height: 180vh; 
+    height: 185vh; 
     padding: 2em; 
     background-color: var(--color-default); 
     text-align: center;
     color: var(--color-text);
+    scroll-margin-top:  100px; /* Ajuste este valor conforme necessário */
 }
+
 
 .aboutContainer {
     width: 100%;
@@ -237,17 +239,18 @@ section {
     margin-right: auto; /* Para colar à esquerda */
     display: flex; /* Utilizar flexbox para alinhar o conteúdo */
     justify-content: center; /* Centralizar o conteúdo horizontalmente */
-    width: 100%;
-    background-color: rgb(10, 10, 10);
-    border-radius: 2em;
-    padding: 2em;
-    margin: 2em 0;
+    align-items: center; /* Centralizar itens verticalmente */
+    width:  100%;
+    background-color: rgb(10,  10,  10);
+    border-radius:  2em;
+    padding:  2em;
+    margin:  2em  0;
 }
+
 
 .aboutLocalizacaoCampanha img{
     width: 30%;
     height: 30vh;
-    margin: 2em;
     transition: .5s;
 }
 
@@ -258,6 +261,11 @@ section {
 
 .aboutLocalizacaoCampanha p{
     margin: 2em;
+    flex-grow:  1; /* Permite que o parágrafo ocupe o espaço disponível */
+}
+
+.aboutLocalizacaoCampanha p a{
+    color: var(--color-title);
 }
 
 .aboutHistoriaCampanha {
@@ -285,8 +293,13 @@ section {
 }
 
 .aboutHistoriaCampanha p{
-    margin: 2em;
+    margin: 5em 2em;
 }
+
+/* #endregion */
+
+/* #region about */
+
 
 
 /* #endregion */
