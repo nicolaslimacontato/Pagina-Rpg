@@ -130,6 +130,11 @@ section {
     opacity: 0;
     transition: .6s;
     text-align: center;
+    padding: 0 2em;
+}
+
+.menu li:nth-child(2) span {
+    white-space: nowrap;
 }
 
 .menu li:hover span {
@@ -178,22 +183,110 @@ section {
 /* #endregion */
 
 /* #region about */
-#about{
-    background-color: var(--color-pa);
+
+#about {
+    width: 100%; 
+    height: 180vh; 
+    padding: 2em; 
+    background-color: var(--color-default); 
+    text-align: center;
+    color: var(--color-text);
 }
 
 .aboutContainer {
     width: 100%;
     height: 100vh;
-    text-align: center;
-}
-
-.aboutDnd img{
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    text-align: left;
     display: flex;
 }
+
+.aboutContainer h1{
+    font-size: var(--text-icon);
+}
+
+.aboutDnd {
+    text-align: left; /* Alinhar o texto à esquerda */
+    margin-right: auto; /* Para colar à esquerda */
+    display: flex; /* Utilizar flexbox para alinhar o conteúdo */
+    justify-content: center; /* Centralizar o conteúdo horizontalmente */
+    width: 100%;
+    background-color: rgb(10, 10, 10);
+    border-radius: 2em;
+    padding: 2em;
+    margin: 2em 0;
+}
+
+
+.aboutDnd img{
+    width: 30%;
+    height: 30vh;
+    margin: 2em;
+    transition: .5s;
+}
+
+.aboutDnd img:hover{
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+.aboutDnd p{
+    margin: 2em;
+}
+
+.aboutLocalizacaoCampanha {
+    text-align: left; /* Alinhar o texto à esquerda */
+    margin-right: auto; /* Para colar à esquerda */
+    display: flex; /* Utilizar flexbox para alinhar o conteúdo */
+    justify-content: center; /* Centralizar o conteúdo horizontalmente */
+    width: 100%;
+    background-color: rgb(10, 10, 10);
+    border-radius: 2em;
+    padding: 2em;
+    margin: 2em 0;
+}
+
+.aboutLocalizacaoCampanha img{
+    width: 30%;
+    height: 30vh;
+    margin: 2em;
+    transition: .5s;
+}
+
+.aboutLocalizacaoCampanha img:hover{
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+.aboutLocalizacaoCampanha p{
+    margin: 2em;
+}
+
+.aboutHistoriaCampanha {
+    text-align: left; /* Alinhar o texto à esquerda */
+    margin-right: auto; /* Para colar à esquerda */
+    display: flex; /* Utilizar flexbox para alinhar o conteúdo */
+    justify-content: center; /* Centralizar o conteúdo horizontalmente */
+    width: 100%;
+    background-color: rgb(10, 10, 10);
+    border-radius: 2em;
+    padding: 2em;
+    margin: 2em 0;
+}
+
+.aboutHistoriaCampanha img{
+    width: 30%;
+    height: 30vh;
+    margin: 2em;
+    transition: .5s;
+}
+
+.aboutHistoriaCampanha img:hover{
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+.aboutHistoriaCampanha p{
+    margin: 2em;
+}
+
 
 /* #endregion */
