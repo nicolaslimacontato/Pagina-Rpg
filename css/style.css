@@ -376,7 +376,7 @@ section {
     height: 250px;
     background-color: var(--colorText);
     color: var(--colorBase);
-   padding: 50px 40px;
+    padding: 2em 2em;;
 }
 
 .cardButton{
