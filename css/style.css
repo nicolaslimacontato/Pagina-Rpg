@@ -41,7 +41,7 @@ body {
     --color-tertiary: #b3d5e0;
     --color-detail1: lime;
     --color-detail2: orange;
-    --color-bg: rgba(0, 0, 0, .6);
+    --color-bg: rgb(10, 10, 10);
     --color-paragraph: rgba(255, 255, 255, .7);
 }
 
@@ -108,7 +108,7 @@ section {
 
 /* #endregion */
 
-/* #region navbar */
+/* #region menu */
 
 
 .menu {
@@ -344,92 +344,72 @@ section {
 
 /* #region products */
 
-#products {
-    width: 100%;
-    height: 90vh;
-    background-color: var(--color-default);
-    color: var(--color-text);
-    scroll-margin-top: 8em;
-}
-
-#products h1 {
-    font-size: var(--text-icon);
-}
-
-.productsContainer {
-    margin-top: 3em;
-    width: 100%;
-    height: 90vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.card {
-    height: 70vh;
-    flex-basis: 20%;
-    background-color: rgb(10, 10, 10);
-    text-align: center;
-}
-
-.card li p{
-    height: 250px;
-    background-color: var(--colorText);
-    color: var(--colorBase);
-    padding: 2em 2em;;
-}
-
-.cardButton{
+#card{
     display: flex;
     justify-content: center;
-    margin-top: 4em;
-    margin-right: 1em;
-}
-
-.card li button {
-    background-color:  rgb(10, 10, 10); 
-    color: var(--color-background); 
-    padding: 1em 2em; 
-    border-radius: 25em; 
-    border: 2px solid var(--color-title);
-    transition: .5s;
-}
-
-.card li button:hover {
-    background-color: var(--color-title); 
-    border-radius: 25em; 
+    align-items: center;
+    height: 100vh;
+    gap: 4em;
+    background-color: var(--color-default);
     color: var(--color-background);
-    transform: scale(1.12);
+}
+
+.cardBox{
+    background-color: var(--color-bg);
+    width: 15%;
+    border-radius: 1.5em;
+}
+
+.cardBox img{
+    width: 93%;
+    margin-top: 1.5em;
+}
+
+.cardsBaixo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.cardsBaixo h1{
+    font-size: var(--text-icon);
+    margin-top: 1em;
+}
+
+.cardsBaixo a{
+    margin-top: 1em;
+    margin-bottom: 3em;
+}
+
+.cardsBaixo button{
+    color: var(--color-background);
+    background-color: var(--color-bg);
+    border: 2px solid var(--color-title);
+    border-radius: 2em;
+    padding: .5em 1em;
+    font-size: var(--text-subtitle);
     transition: .5s;
 }
 
-
-.card li img {
-    width:   100%; /* Define a largura da imagem para   100% do contêiner pai */
-    height: auto; /* Mantém a proporção da imagem */
-    object-fit: cover; /* Ajusta a imagem para preencher o contêiner sem distorcer */
-    margin:   0; /* Remove qualquer margem */
-    padding:   0; /* Remove qualquer preenchimento */
+.cardsBaixo button:hover{
+    transition: .5s;
+    transform: scale(1.2);
+    background-color: var(--color-title);
+    font-weight: bold;
 }
 
-/* #region imagens */
-#roll20{
-    width: 65%;
+.wikiDot img{
+    width: 42%;
 }
 
-#discord{
-    margin-top: 2em;
+.roll20 img{
+    width: 49.5%;
 }
 
-#wikiDot{
-    width: 64%;
+.discord img{
+    width: 89%;
 }
-
-/* #endregion */
-
-.pDoValda{
-    margin-top: 2.9em;
-}
-
 
 /* #endregion */
