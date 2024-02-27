@@ -23,7 +23,6 @@
 html {
     font-size: 20px;
     scroll-behavior: smooth;
-    background-color: var(--color-default);
 }
 
 /* em */
@@ -39,7 +38,7 @@ body {
     --color-primary: midnightblue;
     --color-secundary: navy;
     --color-tertiary: #b3d5e0;
-    --color-detail1: lime;
+    --color-detail1: rgba(0, 0, 0, 0.692);
     --color-detail2: orange;
     --color-bg: rgb(10, 10, 10);
     --color-paragraph: rgba(255, 255, 255, .7);
@@ -202,7 +201,7 @@ section {
     height: 100vh;
     line-height: 100vh;
     text-align: center;
-    background-color: var(--color-bg);
+    background-color: var(--color-detail1);
 }
 
 
@@ -342,7 +341,7 @@ section {
 
 /* #endregion */
 
-/* #region products */
+/* #region cards */
 
 #card{
     display: flex;
@@ -391,6 +390,7 @@ section {
     padding: .5em 1em;
     font-size: var(--text-subtitle);
     transition: .5s;
+    cursor: pointer;
 }
 
 .cardsBaixo button:hover{
@@ -410,6 +410,26 @@ section {
 
 .discord img{
     width: 89%;
+}
+
+/* #endregion */
+
+/* #region classes */
+
+#classes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4em;
+    background-color: var(--color-default);
+    color: var(--color-background);
+}
+
+.classesContainer{
+    background-color: var(--color-bg);
+    width: 35%;
+    border-radius: 1.5em;
 }
 
 /* #endregion */
