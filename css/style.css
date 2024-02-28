@@ -420,20 +420,12 @@ section {
 
 /* #region classes */
 
-.tituloClasses{
-    background-color: var(--color-default);
-    display: flex;
-    justify-content: center;
-    margin-bottom: 2em;
-    font-size: var(--text-title);
-}
-
 #classes{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
-    gap: 5em;
+    gap: 3em;
     background-color: var(--color-default);
     scroll-margin-top: 300px;
     color: var(--color-background);
@@ -446,7 +438,10 @@ section {
     border-radius: 1.5em;
     height: 35vh;
     text-align: left;
-    margin: 3em 0;
+}
+
+.pistoleiromargem{
+    margin-bottom: 10em;
 }
 
 .classesContainer h1 , h2{
@@ -655,7 +650,7 @@ section {
     border-radius: 2em;
 }
 
-/* #end region*/
+/* #endregion*/
 
 .infromacao li {
     display: flex;
@@ -666,7 +661,7 @@ section {
 
 .infromacao li h1, .infromacao li h2 {
     margin-left: .3em;
-    border-bottom: 2px solid red;
+    border-bottom: 2px solid var(--color-title);
     padding-top: .5em;
     padding-bottom: .5em;
 }
@@ -674,7 +669,7 @@ section {
 .infromacao li h2 {
     padding-top: 1em;
     padding-bottom: 1em;
-    color: red;
+    color: var(--color-title);
     font-size: 1.6em;
 }
 
