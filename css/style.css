@@ -348,16 +348,18 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 70vh;
     gap: 4em;
     background-color: var(--color-default);
     color: var(--color-background);
+    scroll-margin-top: 350px;
 }
 
 .cardBox{
     background-color: var(--color-bg);
-    width: 15%;
+    width: 20%;
     border-radius: 1.5em;
+    margin-bottom: 6.5em;
 }
 
 .cardBox img{
@@ -371,6 +373,7 @@ section {
     justify-content: center;
     align-items: center;
     gap: 2em;
+    height: 35vh;
 }
 
 .cardsBaixo h1{
@@ -402,7 +405,7 @@ section {
 }
 
 .wikiDot img{
-    width: 42%;
+    width: 48%;
 }
 
 .roll20 img{
@@ -430,10 +433,11 @@ section {
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
-    gap: 4em;
+    gap: 5em;
     background-color: var(--color-default);
-    scroll-margin-top: 350px;
+    scroll-margin-top: 300px;
     color: var(--color-background);
+    
 }
 
 .classesContainer{
@@ -442,6 +446,7 @@ section {
     border-radius: 1.5em;
     height: 35vh;
     text-align: left;
+    margin: 3em 0;
 }
 
 .classesContainer h1{
@@ -450,6 +455,21 @@ section {
 }
 
 /* #region imagens fundo classes */
+
+.alquimista{
+    background-image: url('../img/alchemist.png');
+    background-repeat: no-repeat;
+    background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
+    height: 35vh;
+}
+
+
+.artesao{
+    background-image: url('../img/artesao.png');
+    background-repeat: no-repeat;
+    background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
+    height: 35vh;
+}
 
 .barbaro {
     background-image: url('../img/barbaro.png');
@@ -465,19 +485,37 @@ section {
     height: 35vh;
 }
 
+
+.capitao{
+    background-image: url('../img/capitao.png');
+    background-repeat: no-repeat;
+    background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
+    height: 35vh;
+}
+
+.clerigo{
+    background-image: url('../img/clerigo.png');
+    background-repeat: no-repeat;
+    background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
+    height: 35vh;
+}
+
+
+
+
 /* #end region*/
 
 .infromacao li {
     display: flex;
     align-items: center;
-    width: 50%;
+    width: 39%;
     margin-left: 2em;
 }
 
 .infromacao li h1 {
-    margin-left: 1em;
-}
+    margin-left: .3em;
 
+}
 
 .infromacao img {
     width: 30%; 
