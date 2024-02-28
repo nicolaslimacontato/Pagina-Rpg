@@ -63,7 +63,7 @@ h1 {
 
 h2 {
     font-size: var(--text-subtitle);
-
+    color: var(--color-title);
 }
 
 p {
@@ -449,7 +449,7 @@ section {
     margin: 3em 0;
 }
 
-.classesContainer h1{
+.classesContainer h1 , h2{
     font-family: 'Merriweather';
     text-transform: uppercase;
 }
@@ -538,6 +538,15 @@ section {
     border-radius: 2em;
 }
 
+.feiticeiro{
+    background-image: url('../img/feiticeiro.png');
+    background-repeat: no-repeat;
+    background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
+    height: 35vh;
+    background-size: 58%;
+    border-radius: 2em;
+}
+
 .guardiao{
     background-image: url('../img/guardiao.png');
     background-repeat: no-repeat;
@@ -565,8 +574,80 @@ section {
     border-radius: 2em;
 }
 
+.ladino{
+    background-image: url('../img/ladino.png');
+    background-repeat: no-repeat;
+    background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
+    height: 35vh;
+    background-size: 58%;
+    border-radius: 2em; 
+}
+
 .mago{
     background-image: url('../img/mago.png');
+    background-repeat: no-repeat;
+    background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
+    height: 35vh;
+    background-size: 58%;
+    border-radius: 2em;
+}
+
+.magodeguerra{
+    background-image: url('../img/magodeguerra.png');
+    background-repeat: no-repeat;
+    background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
+    height: 35vh;
+    background-size: 58%;
+    border-radius: 2em;
+}
+
+.martir{
+    background-image: url('../img/martir.png');
+    background-repeat: no-repeat;
+    background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
+    height: 35vh;
+    background-size: 58%;
+    border-radius: 2em;
+}
+
+.monge{
+    background-image: url('../img/monge.png');
+    background-repeat: no-repeat;
+    background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
+    height: 35vh;
+    background-size: 58%;
+    border-radius: 2em;
+}
+
+.necromante{
+    background-image: url('../img/necromante.png');
+    background-repeat: no-repeat;
+    background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
+    height: 35vh;
+    background-size: 58%;
+    border-radius: 2em;
+}
+
+.paladino{
+    background-image: url('../img/paladino.png');
+    background-repeat: no-repeat;
+    background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
+    height: 35vh;
+    background-size: 58%;
+    border-radius: 2em;
+}
+
+.patrulheiro{
+    background-image: url('../img/patrulheiro.png');
+    background-repeat: no-repeat;
+    background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
+    height: 35vh;
+    background-size: 58%;
+    border-radius: 2em;
+}
+
+.pistoleiro{
+    background-image: url('../img/pistoleiro.png');
     background-repeat: no-repeat;
     background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
     height: 35vh;
@@ -583,11 +664,18 @@ section {
     margin-left: 2em;
 }
 
-.infromacao li h1 {
+.infromacao li h1, .infromacao li h2 {
     margin-left: .3em;
     border-bottom: 2px solid red;
     padding-top: .5em;
     padding-bottom: .5em;
+}
+
+.infromacao li h2 {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    color: red;
+    font-size: 1.6em;
 }
 
 .infromacao img {
