@@ -437,12 +437,12 @@ section {
     background-color: var(--color-default);
     scroll-margin-top: 300px;
     color: var(--color-background);
-    
+    height: auto;
 }
 
 .classesContainer{
     background-color: var(--color-bg);
-    width: 35%;
+    width: 28%;
     border-radius: 1.5em;
     height: 35vh;
     text-align: left;
@@ -461,6 +461,8 @@ section {
     background-repeat: no-repeat;
     background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
     height: 35vh;
+    background-size: 58%;
+    border-radius: 2em;
 }
 
 
@@ -469,13 +471,17 @@ section {
     background-repeat: no-repeat;
     background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
     height: 35vh;
+    background-size: 58%;
+    border-radius: 2em;
 }
 
 .barbaro {
     background-image: url('../img/barbaro.png');
     background-repeat: no-repeat;
-    background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
+    background-position: right; /* Posiciona a imagem no canto inferior direito */
     height: 35vh;
+    background-size: 58%;
+    border-radius: 2em;
 }
 
 .bardo{
@@ -483,14 +489,35 @@ section {
     background-repeat: no-repeat;
     background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
     height: 35vh;
+    background-size: 58%;
+    border-radius: 2em;
 }
 
+.bruxa{
+    background-image: url('../img/bruxa.png');
+    background-repeat: no-repeat;
+    background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
+    height: 35vh;
+    background-size: 58%;
+    border-radius: 2em;
+}
+
+.bruxo{
+    background-image: url('../img/bruxo.png');
+    background-repeat: no-repeat;
+    background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
+    height: 35vh;
+    background-size: 58%;
+    border-radius: 2em;
+}
 
 .capitao{
     background-image: url('../img/capitao.png');
     background-repeat: no-repeat;
     background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
     height: 35vh;
+    background-size: 58%;
+    border-radius: 2em;
 }
 
 .clerigo{
@@ -498,29 +525,71 @@ section {
     background-repeat: no-repeat;
     background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
     height: 35vh;
+    background-size: 58%;
+    border-radius: 2em;
 }
 
+.druida{
+    background-image: url('../img/druida.png');
+    background-repeat: no-repeat;
+    background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
+    height: 35vh;
+    background-size: 58%;
+    border-radius: 2em;
+}
 
+.guardiao{
+    background-image: url('../img/guardiao.png');
+    background-repeat: no-repeat;
+    background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
+    height: 35vh;
+    background-size: 58%;
+    border-radius: 2em;
+}
 
+.guerreiro{
+    background-image: url('../img/guerreiro.png');
+    background-repeat: no-repeat;
+    background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
+    height: 35vh;
+    background-size: 58%;
+    border-radius: 2em;
+}
+
+.investigador{
+    background-image: url('../img/investigador.png');
+    background-repeat: no-repeat;
+    background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
+    height: 35vh;
+    background-size: 58%;
+    border-radius: 2em;
+}
 
 /* #end region*/
 
 .infromacao li {
     display: flex;
     align-items: center;
-    width: 39%;
+    width: 60%;
     margin-left: 2em;
 }
 
 .infromacao li h1 {
     margin-left: .3em;
-
+    border-bottom: 2px solid red;
+    padding-top: .5em;
+    padding-bottom: .5em;
 }
 
 .infromacao img {
-    width: 30%; 
+    width: 20%; 
     margin: 1em 0;
+    margin-top: 2em;
     border-radius: 1em
+}
+
+.infromacao p{
+    margin-top: 1em;
 }
 
 .infromacao button{
