@@ -23,6 +23,7 @@
 html {
     font-size: 20px;
     scroll-behavior: smooth;
+    background-color: var(--color-default);
 }
 
 /* em */
@@ -416,6 +417,14 @@ section {
 
 /* #region classes */
 
+.tituloClasses{
+    background-color: var(--color-default);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2em;
+    font-size: var(--text-title);
+}
+
 #classes{
     display: flex;
     flex-wrap: wrap;
@@ -423,6 +432,7 @@ section {
     align-items: flex-start;
     gap: 4em;
     background-color: var(--color-default);
+    scroll-margin-top: 350px;
     color: var(--color-background);
 }
 
@@ -430,6 +440,68 @@ section {
     background-color: var(--color-bg);
     width: 35%;
     border-radius: 1.5em;
+    height: 35vh;
+    text-align: left;
 }
+
+.classesContainer h1{
+    font-family: 'Merriweather';
+    text-transform: uppercase;
+}
+
+/* #region imagens fundo classes */
+
+.barbaro {
+    background-image: url('../img/barbaro.png');
+    background-repeat: no-repeat;
+    background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
+    height: 35vh;
+}
+
+.bardo{
+    background-image: url('../img/bardo.png');
+    background-repeat: no-repeat;
+    background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
+    height: 35vh;
+}
+
+/* #end region*/
+
+.infromacao li {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    margin-left: 2em;
+}
+
+.infromacao li h1 {
+    margin-left: 1em;
+}
+
+
+.infromacao img {
+    width: 30%; 
+    margin: 1em 0;
+    border-radius: 1em
+}
+
+.infromacao button{
+    color: var(--color-background);
+    background-color: var(--color-bg);
+    border: 2px solid var(--color-title);
+    border-radius: 2em;
+    padding: .5em 1em;
+    font-size: var(--text-subtitle);
+    transition: .5s;
+    cursor: pointer;
+}
+
+.infromacao button:hover{
+    transition: .5s;
+    transform: scale(1.2);
+    background-color: var(--color-title);
+    font-weight: bold;
+}
+
 
 /* #endregion */
