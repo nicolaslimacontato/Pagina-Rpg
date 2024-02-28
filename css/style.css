@@ -548,7 +548,7 @@ section {
 }
 
 .guerreiro{
-    background-image: url('../img/guerreiro.png');
+    background-image: url('../img/Guerreiro.png');
     background-repeat: no-repeat;
     background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
     height: 35vh;
