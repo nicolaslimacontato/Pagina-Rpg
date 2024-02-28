@@ -565,6 +565,15 @@ section {
     border-radius: 2em;
 }
 
+.mago{
+    background-image: url('../img/mago.png');
+    background-repeat: no-repeat;
+    background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
+    height: 35vh;
+    background-size: 58%;
+    border-radius: 2em;
+}
+
 /* #end region*/
 
 .infromacao li {
