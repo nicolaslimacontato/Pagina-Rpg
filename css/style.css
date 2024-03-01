@@ -420,20 +420,12 @@ section {
 
 /* #region classes */
 
-.tituloClasses{
-    background-color: var(--color-default);
-    display: flex;
-    justify-content: center;
-    margin-bottom: 2em;
-    font-size: var(--text-title);
-}
-
 #classes{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
-    gap: 5em;
+    gap: 3em;
     background-color: var(--color-default);
     scroll-margin-top: 300px;
     color: var(--color-background);
@@ -442,11 +434,14 @@ section {
 
 .classesContainer{
     background-color: var(--color-bg);
-    width: 28%;
+    width: 31%;
     border-radius: 1.5em;
-    height: 35vh;
+    height: 40vh;
     text-align: left;
-    margin: 3em 0;
+}
+
+.pistoleiromargem{
+    margin-bottom: 10em;
 }
 
 .classesContainer h1 , h2{
@@ -460,7 +455,7 @@ section {
     background-image: url('../img/alchemist.png');
     background-repeat: no-repeat;
     background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
-    height: 35vh;
+    height: 40vh;
     background-size: 58%;
     border-radius: 2em;
 }
@@ -470,7 +465,7 @@ section {
     background-image: url('../img/artesao.png');
     background-repeat: no-repeat;
     background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
-    height: 35vh;
+    height: 40vh;
     background-size: 58%;
     border-radius: 2em;
 }
@@ -479,7 +474,7 @@ section {
     background-image: url('../img/barbaro.png');
     background-repeat: no-repeat;
     background-position: right; /* Posiciona a imagem no canto inferior direito */
-    height: 35vh;
+    height: 40vh;
     background-size: 58%;
     border-radius: 2em;
 }
@@ -488,7 +483,7 @@ section {
     background-image: url('../img/bardo.png');
     background-repeat: no-repeat;
     background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
-    height: 35vh;
+    height: 40vh;
     background-size: 58%;
     border-radius: 2em;
 }
@@ -497,7 +492,7 @@ section {
     background-image: url('../img/bruxa.png');
     background-repeat: no-repeat;
     background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
-    height: 35vh;
+    height: 40vh;
     background-size: 58%;
     border-radius: 2em;
 }
@@ -506,7 +501,7 @@ section {
     background-image: url('../img/bruxo.png');
     background-repeat: no-repeat;
     background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
-    height: 35vh;
+    height: 40vh;
     background-size: 58%;
     border-radius: 2em;
 }
@@ -515,7 +510,7 @@ section {
     background-image: url('../img/capitao.png');
     background-repeat: no-repeat;
     background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
-    height: 35vh;
+    height: 40vh;
     background-size: 58%;
     border-radius: 2em;
 }
@@ -524,7 +519,7 @@ section {
     background-image: url('../img/clerigo.png');
     background-repeat: no-repeat;
     background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
-    height: 35vh;
+    height: 40vh;
     background-size: 58%;
     border-radius: 2em;
 }
@@ -533,7 +528,7 @@ section {
     background-image: url('../img/druida.png');
     background-repeat: no-repeat;
     background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
-    height: 35vh;
+    height: 40vh;
     background-size: 58%;
     border-radius: 2em;
 }
@@ -542,7 +537,7 @@ section {
     background-image: url('../img/feiticeiro.png');
     background-repeat: no-repeat;
     background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
-    height: 35vh;
+    height: 40vh;
     background-size: 58%;
     border-radius: 2em;
 }
@@ -551,7 +546,7 @@ section {
     background-image: url('../img/guardiao.png');
     background-repeat: no-repeat;
     background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
-    height: 35vh;
+    height: 40vh;
     background-size: 58%;
     border-radius: 2em;
 }
@@ -560,7 +555,7 @@ section {
     background-image: url('../img/Guerreiro.png');
     background-repeat: no-repeat;
     background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
-    height: 35vh;
+    height: 40vh;
     background-size: 58%;
     border-radius: 2em;
 }
@@ -569,7 +564,7 @@ section {
     background-image: url('../img/investigador.png');
     background-repeat: no-repeat;
     background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
-    height: 35vh;
+    height: 40vh;
     background-size: 58%;
     border-radius: 2em;
 }
@@ -578,7 +573,7 @@ section {
     background-image: url('../img/ladino.png');
     background-repeat: no-repeat;
     background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
-    height: 35vh;
+    height: 40vh;
     background-size: 58%;
     border-radius: 2em; 
 }
@@ -587,7 +582,7 @@ section {
     background-image: url('../img/mago.png');
     background-repeat: no-repeat;
     background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
-    height: 35vh;
+    height: 40vh;
     background-size: 58%;
     border-radius: 2em;
 }
@@ -596,7 +591,7 @@ section {
     background-image: url('../img/magodeguerra.png');
     background-repeat: no-repeat;
     background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
-    height: 35vh;
+    height: 40vh;
     background-size: 58%;
     border-radius: 2em;
 }
@@ -605,7 +600,7 @@ section {
     background-image: url('../img/martir.png');
     background-repeat: no-repeat;
     background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
-    height: 35vh;
+    height: 40vh;
     background-size: 58%;
     border-radius: 2em;
 }
@@ -614,7 +609,7 @@ section {
     background-image: url('../img/monge.png');
     background-repeat: no-repeat;
     background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
-    height: 35vh;
+    height: 40vh;
     background-size: 58%;
     border-radius: 2em;
 }
@@ -623,7 +618,7 @@ section {
     background-image: url('../img/necromante.png');
     background-repeat: no-repeat;
     background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
-    height: 35vh;
+    height: 40vh;
     background-size: 58%;
     border-radius: 2em;
 }
@@ -632,7 +627,7 @@ section {
     background-image: url('../img/paladino.png');
     background-repeat: no-repeat;
     background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
-    height: 35vh;
+    height: 40vh;
     background-size: 58%;
     border-radius: 2em;
 }
@@ -641,7 +636,7 @@ section {
     background-image: url('../img/patrulheiro.png');
     background-repeat: no-repeat;
     background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
-    height: 35vh;
+    height: 40vh;
     background-size: 58%;
     border-radius: 2em;
 }
@@ -650,23 +645,23 @@ section {
     background-image: url('../img/pistoleiro.png');
     background-repeat: no-repeat;
     background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
-    height: 35vh;
+    height: 40vh;
     background-size: 58%;
     border-radius: 2em;
 }
 
-/* #end region*/
+/* #endregion*/
 
 .infromacao li {
     display: flex;
     align-items: center;
-    width: 60%;
+    width: 65%;
     margin-left: 2em;
 }
 
 .infromacao li h1, .infromacao li h2 {
     margin-left: .3em;
-    border-bottom: 2px solid red;
+    border-bottom: 2px solid var(--color-title);
     padding-top: .5em;
     padding-bottom: .5em;
 }
@@ -674,7 +669,7 @@ section {
 .infromacao li h2 {
     padding-top: 1em;
     padding-bottom: 1em;
-    color: red;
+    color: var(--color-title);
     font-size: 1.6em;
 }
 
