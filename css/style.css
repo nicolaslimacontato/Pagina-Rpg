@@ -71,6 +71,10 @@ p {
 
 }
 
+a {
+    text-decoration: none;
+}
+
 section {
     width: 100%;
     height: 100vh;
@@ -105,87 +109,166 @@ section {
     cursor: pointer;
 }
 
+.titulosPagina{
+    font-size: 2em;
+    margin: 2em 0;
+    display: flex;
+    justify-content: center;
+}
 
 /* #endregion */
 
 /* #region menu */
 
-
-.menu {
+header {
+    background-color: var(--color-default);
     position: fixed;
-    width: 100%;
+    padding-inline: .8em;
+    width: 100vw;
+}
+
+.nav {
+    max-width: 1280px;
+    height: auto;
+    margin-inline: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: row;
-    background-color: var(--color-default);
-    z-index: 99;
 }
 
-.menu ul {
+.logo img {
+    width: 4vw;
+}
+
+.navList {
     display: flex;
-    margin: auto;
+    gap: 2em;
+    list-style: none;
+    font-size: 1.5em;
 }
 
-
-.menu li {
-    position: relative;
-    margin-right: 13em;
-    padding: 2em;
+.navList a {
+    color: white;
+    font-size: var(--text-subtitle);
+    padding-block: .8em;
 }
 
-.menu a {
-    text-decoration: none;
-    color: var(--color-text);
+.navList li{
+    padding: 0 1.5em;
 }
 
-.menu a {
-    color: var(--color-background);
-    transition: .5s;
-}
-
-.menu li a i {
-    font-size: var(--text-icon);
-}
-
-.menu a:hover {
+.navList li i {
     color: var(--color-title);
-    transition: .5s;
+    padding: 0 .3em;
+    font-size: 1.5em;
 }
 
-.menu li span {
+
+.navList li span {
+    border: 1px solid var(--color-title);
     position: absolute;
-    letter-spacing: .3em;
-    margin-top: .67em;
-    top: -4em;
+    background-color: var(--color-bg);
+    transition: .5s;
     opacity: 0;
-    transition: .6s;
-    text-align: center;
-    padding: 0 2em;
+    font-size: .5em;
+    margin-top: .8em;
+    padding: .2em .7em;
 }
 
-.menu li:nth-child(2) span {
-    white-space: nowrap;
+.navList li i:hover {
+    color: var(--color-background);
 }
 
-.menu li:hover span {
+.navList li:hover span {
     transition: .5s;
     opacity: 1;
-    top: 2em;
-    color: var(--color-title);
 }
 
-.menu img {
-    max-width: 100%;
-    height: 4em;
-    margin-left: 5em;
-    transition: .5s;
+.hamburger {
+    border: none;
+    display: none;
+    background: none;
+    border-top: 3px solid white;
+    cursor: pointer;
+    transition: .4s;
 }
 
-.menu img:hover {
-    transform: scale(1.1);
-    transition: .5s;
+.hamburger::before,
+.hamburger::after {
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin-top: 5px;
+    position: relative;
 }
+
+@media (max-width: 970px){
+    .hamburger{
+        display: block;
+        z-index: 1;
+    }
+    .navList{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--color-default);
+        clip-path: circle(100px at 90% -15%);
+        transition: 1s ease-out;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
+        pointer-events: none;
+    }
+    .nav.active .navList{
+        clip-path: circle(1500px at 90% -15%);
+        pointer-events: all;
+    }
+    .navList a{
+        font-size: 3em;
+        opacity: 0;
+    }
+    .navList li span {
+        opacity: 1;
+    }
+    .navList li:nth-child(1) a{
+        transition: 0.5s 0.2s;
+    }
+    .navList li:nth-child(2) a{
+        transition: 0.5s 0.4s;
+    }
+    .navList li:nth-child(3) a{
+        transition: 0.5s 0.6s;
+    }
+    .navList li:nth-child(4) a{
+        transition: 0.5s 0.8s;
+    }
+    .navList li:nth-child(5) a{
+        transition: 0.5s 0.10s;
+    }
+    .nav.active .navList a{
+        opacity: 1;
+    }
+    .nav.active .hamburger{
+        position: fixed;
+        top: 26px;
+        right: 16px;
+        border-top-color: transparent;
+        transition: .4s;
+    }
+    .nav.active .hamburger::before{
+        transform: rotate(135deg);
+    }
+    .nav.active .hamburger::after{
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+}
+
 
 /* #endregion */
 
@@ -198,8 +281,8 @@ section {
 }
 
 .homeContainer {
-    width: 100%;
-    height: 100vh;
+    width: 99.1vw;
+    height: auto;
     line-height: 100vh;
     text-align: center;
     background-color: var(--color-detail1);
@@ -216,18 +299,19 @@ section {
 /* #region about */
 
 #about {
-    width: 100%;
-    height: 188vh;
+    width: 99.1vw;
+    height: auto;
     padding: 2em;
     background-color: var(--color-default);
     text-align: center;
     color: var(--color-text);
     scroll-margin-top: 100px;
+    margin-bottom: 3em;
 }
 
 .aboutContainer {
-    width: 100%;
-    height: 100vh;
+    width: 95vw;
+    height: auto;
     display: flex;
 }
 
@@ -244,7 +328,7 @@ section {
     /* Utilizar flexbox para alinhar o conteúdo */
     justify-content: center;
     /* Centralizar o conteúdo horizontalmente */
-    width: 100%;
+    width: 95vw;
     background-color: rgb(10, 10, 10);
     border-radius: 2em;
     padding: 2em;
@@ -253,8 +337,8 @@ section {
 
 
 .aboutDnd img {
-    width: 30%;
-    height: 30vh;
+    width: 30vw;
+    height: 25vh;
     margin: 2em;
     transition: .5s;
 }
@@ -279,7 +363,7 @@ section {
     /* Centralizar o conteúdo horizontalmente */
     align-items: center;
     /* Centralizar itens verticalmente */
-    width: 100%;
+    width: 95vw;
     background-color: rgb(10, 10, 10);
     border-radius: 2em;
     padding: 2em;
@@ -289,7 +373,7 @@ section {
 
 .aboutLocalizacaoCampanha img {
     width: 30%;
-    height: 30vh;
+    height: 25vh;
     transition: .5s;
 }
 
@@ -317,7 +401,7 @@ section {
     /* Utilizar flexbox para alinhar o conteúdo */
     justify-content: center;
     /* Centralizar o conteúdo horizontalmente */
-    width: 100%;
+    width: 95vw;
     background-color: rgb(10, 10, 10);
     border-radius: 2em;
     padding: 2em;
@@ -325,8 +409,8 @@ section {
 }
 
 .aboutHistoriaCampanha img {
-    width: 30%;
-    height: 30vh;
+    width: 30vw;
+    height: 25vh;
     margin: 2em;
     transition: .5s;
 }
@@ -344,49 +428,50 @@ section {
 
 /* #region cards */
 
-#card{
+#card {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    height: 70vh;
+    align-items: flex-start;
+    height: auto;
     gap: 4em;
     background-color: var(--color-default);
     color: var(--color-background);
     scroll-margin-top: 350px;
 }
 
-.cardBox{
+.cardBox {
     background-color: var(--color-bg);
-    width: 20%;
+    width: 20vw;
     border-radius: 1.5em;
-    margin-bottom: 6.5em;
+    height: 60vh;
 }
 
-.cardBox img{
-    width: 93%;
+.cardBox img {
+    width: 90%;
     margin-top: 1.5em;
 }
 
-.cardsBaixo{
+.cardsBaixo {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2em;
-    height: 35vh;
+    height: auto;
 }
 
-.cardsBaixo h1{
+.cardsBaixo h1 {
     font-size: var(--text-icon);
     margin-top: 1em;
 }
 
-.cardsBaixo a{
+.cardsBaixo a {
     margin-top: 1em;
     margin-bottom: 3em;
 }
 
-.cardsBaixo button{
+.cardsBaixo button {
     color: var(--color-background);
     background-color: var(--color-bg);
     border: 2px solid var(--color-title);
@@ -397,22 +482,22 @@ section {
     cursor: pointer;
 }
 
-.cardsBaixo button:hover{
+.cardsBaixo button:hover {
     transition: .5s;
     transform: scale(1.2);
     background-color: var(--color-title);
     font-weight: bold;
 }
 
-.wikiDot img{
+.wikiDot img {
     width: 48%;
 }
 
-.roll20 img{
+.roll20 img {
     width: 49.5%;
 }
 
-.discord img{
+.discord img {
     width: 89%;
 }
 
@@ -420,7 +505,7 @@ section {
 
 /* #region classes */
 
-#classes{
+#classes {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -432,221 +517,248 @@ section {
     height: auto;
 }
 
-.classesContainer{
+.classesContainer {
     background-color: var(--color-bg);
-    width: 31%;
+    width: 31vw;
     border-radius: 1.5em;
-    height: 40vh;
+    height: auto;
     text-align: left;
+    padding-bottom: 2em;
 }
 
-.pistoleiromargem{
+.pistoleiromargem {
     margin-bottom: 10em;
 }
 
-.classesContainer h1 , h2{
+.classesContainer h1,
+h2 {
     font-family: 'Merriweather';
     text-transform: uppercase;
 }
 
 /* #region imagens fundo classes */
 
-.alquimista{
+.alquimista {
     background-image: url('../img/alchemist.png');
     background-repeat: no-repeat;
-    background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
-    height: 40vh;
-    background-size: 58%;
-    border-radius: 2em;
+    background-position: right bottom;
+    /* Posiciona a imagem no canto inferior direito */
+    height: auto;
+    background-size: 15vw;
 }
 
 
-.artesao{
+.artesao {
     background-image: url('../img/artesao.png');
     background-repeat: no-repeat;
-    background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
-    height: 40vh;
-    background-size: 58%;
+    background-position: right bottom;
+    /* Posiciona a imagem no canto inferior direito */
+    height: auto;
+    background-size: 15vw;
     border-radius: 2em;
 }
 
 .barbaro {
     background-image: url('../img/barbaro.png');
     background-repeat: no-repeat;
-    background-position: right; /* Posiciona a imagem no canto inferior direito */
-    height: 40vh;
-    background-size: 58%;
+    background-position: right;
+    /* Posiciona a imagem no canto inferior direito */
+    height: auto;
+    background-size: 15vw;
     border-radius: 2em;
 }
 
-.bardo{
+.bardo {
     background-image: url('../img/bardo.png');
     background-repeat: no-repeat;
-    background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
-    height: 40vh;
-    background-size: 58%;
+    background-position: right bottom;
+    /* Posiciona a imagem no canto inferior direito */
+    height: auto;
+    background-size: 15vw;
     border-radius: 2em;
 }
 
-.bruxa{
+.bruxa {
     background-image: url('../img/bruxa.png');
     background-repeat: no-repeat;
-    background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
-    height: 40vh;
-    background-size: 58%;
+    background-position: right bottom;
+    /* Posiciona a imagem no canto inferior direito */
+    height: auto;
+    background-size: 15vw;
     border-radius: 2em;
 }
 
-.bruxo{
+.bruxo {
     background-image: url('../img/bruxo.png');
     background-repeat: no-repeat;
-    background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
-    height: 40vh;
-    background-size: 58%;
+    background-position: right bottom;
+    /* Posiciona a imagem no canto inferior direito */
+    height: auto;
+    background-size: 15vw;
     border-radius: 2em;
 }
 
-.capitao{
+.capitao {
     background-image: url('../img/capitao.png');
     background-repeat: no-repeat;
-    background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
-    height: 40vh;
-    background-size: 58%;
+    background-position: right bottom;
+    /* Posiciona a imagem no canto inferior direito */
+    height: auto;
+    background-size: 15vw;
     border-radius: 2em;
 }
 
-.clerigo{
+.clerigo {
     background-image: url('../img/clerigo.png');
     background-repeat: no-repeat;
-    background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
-    height: 40vh;
-    background-size: 58%;
+    background-position: right bottom;
+    /* Posiciona a imagem no canto inferior direito */
+    height: auto;
+    background-size: 15vw;
     border-radius: 2em;
 }
 
-.druida{
+.druida {
     background-image: url('../img/druida.png');
     background-repeat: no-repeat;
-    background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
-    height: 40vh;
-    background-size: 58%;
+    background-position: right bottom;
+    /* Posiciona a imagem no canto inferior direito */
+    height: auto;
+    background-size: 15vw;
     border-radius: 2em;
 }
 
-.feiticeiro{
+.feiticeiro {
     background-image: url('../img/feiticeiro.png');
     background-repeat: no-repeat;
-    background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
-    height: 40vh;
-    background-size: 58%;
+    background-position: right bottom;
+    /* Posiciona a imagem no canto inferior direito */
+    height: auto;
+    background-size: 15vw;
     border-radius: 2em;
 }
 
-.guardiao{
+.guardiao {
     background-image: url('../img/guardiao.png');
     background-repeat: no-repeat;
-    background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
-    height: 40vh;
-    background-size: 58%;
+    background-position: right bottom;
+    /* Posiciona a imagem no canto inferior direito */
+    height: auto;
+    background-size: 15vw;
     border-radius: 2em;
 }
 
-.guerreiro{
+.guerreiro {
     background-image: url('../img/Guerreiro.png');
     background-repeat: no-repeat;
-    background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
-    height: 40vh;
-    background-size: 58%;
+    background-position: right bottom;
+    /* Posiciona a imagem no canto inferior direito */
+    height: auto;
+    background-size: 15vw;
     border-radius: 2em;
 }
 
-.investigador{
+.investigador {
     background-image: url('../img/investigador.png');
     background-repeat: no-repeat;
-    background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
-    height: 40vh;
-    background-size: 58%;
+    background-position: right bottom;
+    /* Posiciona a imagem no canto inferior direito */
+    height: auto;
+    background-size: 15vw;
     border-radius: 2em;
 }
 
-.ladino{
+.investigadorNome{
+    font-size: 1.5em;
+}
+
+.ladino {
     background-image: url('../img/ladino.png');
     background-repeat: no-repeat;
-    background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
-    height: 40vh;
-    background-size: 58%;
-    border-radius: 2em; 
+    background-position: right bottom;
+    /* Posiciona a imagem no canto inferior direito */
+    height: auto;
+    background-size: 15vw;
+    border-radius: 2em;
 }
 
-.mago{
+.mago {
     background-image: url('../img/mago.png');
     background-repeat: no-repeat;
-    background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
-    height: 40vh;
-    background-size: 58%;
+    background-position: right bottom;
+    /* Posiciona a imagem no canto inferior direito */
+    height: auto;
+    background-size: 15vw;
     border-radius: 2em;
 }
 
-.magodeguerra{
+.magodeguerra {
     background-image: url('../img/magodeguerra.png');
     background-repeat: no-repeat;
-    background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
-    height: 40vh;
-    background-size: 58%;
+    background-position: right bottom;
+    /* Posiciona a imagem no canto inferior direito */
+    height: auto;
+    background-size: 15vw;
     border-radius: 2em;
 }
 
-.martir{
+.martir {
     background-image: url('../img/martir.png');
     background-repeat: no-repeat;
-    background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
-    height: 40vh;
-    background-size: 58%;
+    background-position: right bottom;
+    /* Posiciona a imagem no canto inferior direito */
+    height: auto;
+    background-size: 15vw;
     border-radius: 2em;
 }
 
-.monge{
+.monge {
     background-image: url('../img/monge.png');
     background-repeat: no-repeat;
-    background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
-    height: 40vh;
-    background-size: 58%;
+    background-position: right bottom;
+    /* Posiciona a imagem no canto inferior direito */
+    height: auto;
+    background-size: 15vw;
     border-radius: 2em;
 }
 
-.necromante{
+.necromante {
     background-image: url('../img/necromante.png');
     background-repeat: no-repeat;
-    background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
-    height: 40vh;
-    background-size: 58%;
+    background-position: right bottom;
+    /* Posiciona a imagem no canto inferior direito */
+    height: auto;
+    background-size: 15vw;
     border-radius: 2em;
 }
 
-.paladino{
+.paladino {
     background-image: url('../img/paladino.png');
     background-repeat: no-repeat;
-    background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
-    height: 40vh;
-    background-size: 58%;
+    background-position: right bottom;
+    /* Posiciona a imagem no canto inferior direito */
+    height: auto;
+    background-size: 15vw;
     border-radius: 2em;
 }
 
-.patrulheiro{
+.patrulheiro {
     background-image: url('../img/patrulheiro.png');
     background-repeat: no-repeat;
-    background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
-    height: 40vh;
-    background-size: 58%;
+    background-position: right bottom;
+    /* Posiciona a imagem no canto inferior direito */
+    height: auto;
+    background-size: 15vw;
     border-radius: 2em;
 }
 
-.pistoleiro{
+.pistoleiro {
     background-image: url('../img/pistoleiro.png');
     background-repeat: no-repeat;
-    background-position: right bottom; /* Posiciona a imagem no canto inferior direito */
-    height: 40vh;
-    background-size: 58%;
+    background-position: right bottom;
+    /* Posiciona a imagem no canto inferior direito */
+    height: auto;
+    background-size: 15vw;
     border-radius: 2em;
 }
 
@@ -655,11 +767,13 @@ section {
 .infromacao li {
     display: flex;
     align-items: center;
-    width: 65%;
+    width: 50%;
     margin-left: 2em;
+    height: auto;
 }
 
-.infromacao li h1, .infromacao li h2 {
+.infromacao li h1,
+.infromacao li h2 {
     margin-left: .3em;
     border-bottom: 2px solid var(--color-title);
     padding-top: .5em;
@@ -670,21 +784,21 @@ section {
     padding-top: 1em;
     padding-bottom: 1em;
     color: var(--color-title);
-    font-size: 1.6em;
+    font-size: 1em;
 }
 
 .infromacao img {
-    width: 20%; 
+    width: 3vw;
     margin: 1em 0;
     margin-top: 2em;
     border-radius: 1em
 }
 
-.infromacao p{
+.infromacao p {
     margin-top: 1em;
 }
 
-.infromacao button{
+.infromacao button {
     color: var(--color-background);
     background-color: var(--color-bg);
     border: 2px solid var(--color-title);
@@ -695,12 +809,29 @@ section {
     cursor: pointer;
 }
 
-.infromacao button:hover{
+.infromacao button:hover {
     transition: .5s;
     transform: scale(1.2);
     background-color: var(--color-title);
     font-weight: bold;
 }
 
+/* #endregion */
+
+/* #region ficha */
+#ficha {
+    color: white;
+    width: 100%;
+    height: auto;
+    margin-bottom: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#ficha h1 {
+    font-size: 3em;
+}
 
 /* #endregion */
