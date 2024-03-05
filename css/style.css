@@ -832,6 +832,43 @@ h2 {
 
 #ficha h1 {
     font-size: 3em;
+    margin: 2em 0;
 }
+
+#classInfo{
+    background-color: var(--color-bg);
+    padding: 2em;
+    border-radius: 2em;
+    display: block;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 80vw;
+    margin:2em 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#classInfo p{
+    margin: 2em 0;
+}
+
+.habilidadeContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+
+.habilidadeContainer p {
+    flex: 0 0 calc(50% - 20px); /* Faz com que as habilidades ocupem metade do contêiner com um espaçamento de 20px entre elas */
+    margin: 10px;
+    padding: 15px;
+    background-color: #131313;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
 
 /* #endregion */
