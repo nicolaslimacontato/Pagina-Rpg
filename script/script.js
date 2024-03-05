@@ -18,13 +18,32 @@ const habilidades = {
 
 const classSelect = document.getElementById('classSelect');
 const habilidadeContainer = document.querySelector('.habilidadeContainer');
+const classInfo = document.getElementById('classInfo');
+const vidaSpan = document.getElementById('vida');
+const proficienciasSpan = document.getElementById('proficiencias');
 
 classSelect.addEventListener('change', function () {
     const selectedClass = classSelect.value;
+    classInfo.classList.remove('hidden'); // Remove a classe que oculta os elementos
+    habilidadeContainer.classList.remove('hidden'); // Remove a classe que oculta os elementos
+    classInfo.classList.add('shown'); // Adiciona a classe para mostrar com transição suave
+    habilidadeContainer.classList.add('shown'); // Adiciona a classe para mostrar com transição suave
     habilidadeContainer.innerHTML = ''; // Limpa as habilidades anteriores
     habilidades[selectedClass].forEach((habilidade, index) => {
         const habilidadeElement = document.createElement('p');
         habilidadeElement.textContent = `Habilidade ${index + 1}: ${habilidade}`;
         habilidadeContainer.appendChild(habilidadeElement);
     });
+        // Atualiza o dado de vida e as proficiências
+        if (selectedClass === 'alquimista') {
+            vidaSpan.textContent = '1d6';
+            proficienciasSpan.textContent = 'Armadura leve e Armas simples e bombas';
+        } else if (selectedClass === 'artesao') {
+            vidaSpan.textContent = '1d6';
+            proficienciasSpan.textContent = 'Livros de Magia';
+        } else if (selectedClass === 'barbaro') {
+            vidaSpan.textContent = '1d8';
+            proficienciasSpan.textContent = 'Furtividade e Truques';
+        }
 });
+

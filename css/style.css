@@ -837,7 +837,7 @@ h2 {
 
 #classInfo{
     background-color: var(--color-bg);
-    padding: 2em;
+    padding: 1em;
     border-radius: 2em;
     display: block;
     flex-wrap: wrap;
@@ -853,6 +853,27 @@ h2 {
     margin: 2em 0;
 }
 
+#characterForm label{
+    margin-bottom: 1em;
+}
+
+.dvclass{
+    background-color: #131313;
+    border: 2px solid #ccc;
+    width: 30vw;
+    margin: 1em auto;
+    border-radius: 8px;
+}
+
+.profClass{
+    background-color: #131313;
+    border: 2px solid #ccc;
+    width: 30vw;
+    margin: 0 auto;
+    margin-top: 1em;
+    border-radius: 8px;
+}
+
 .habilidadeContainer {
     display: flex;
     flex-wrap: wrap;
@@ -862,12 +883,21 @@ h2 {
 }
 
 .habilidadeContainer p {
-    flex: 0 0 calc(50% - 20px); /* Faz com que as habilidades ocupem metade do contêiner com um espaçamento de 20px entre elas */
-    margin: 10px;
-    padding: 15px;
+    flex: 0 0 calc(50% - 2em); /* Faz com que as habilidades ocupem metade do contêiner com um espaçamento de 20px entre elas */
     background-color: #131313;
+    padding: 1em;
     border: 1px solid #ccc;
     border-radius: 8px;
+}
+
+.hidden {
+    opacity: 0; /* Inicia com a opacidade zero para estar oculto */
+    transition: opacity 0.5s ease; /* Adiciona uma transição suave de opacidade */
+}
+
+.shown {
+    opacity: 1; /* Define a opacidade como 1 para estar visível */
+    transition: opacity 0.5s ease; /* Adiciona uma transição suave de opacidade */
 }
 
 
