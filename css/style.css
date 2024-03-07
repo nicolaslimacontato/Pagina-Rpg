@@ -17,6 +17,7 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
+    outline: none;
 }
 
 /* rem */
@@ -832,7 +833,7 @@ h2 {
 
 #ficha h1 {
     font-size: 3em;
-    margin: 2em 0;
+    margin: 1em 0;
 }
 
 #classInfo{
@@ -853,13 +854,33 @@ h2 {
     margin: 2em 0;
 }
 
+
 #characterForm label{
     margin-bottom: 1em;
+    padding-right: 1em;
 }
+
+.selectCustom{
+    position: relative;
+    display: inline-block;
+}
+
+#classSelect{
+    width: 8%;
+    text-align: center;
+    background-color: var(--color-title);
+    border: none;
+    color: var(--color-background);
+    padding: .7em 0;
+    cursor: pointer;
+    padding-left: .3em;
+    outline: none; /* Remove a borda de foco */
+}
+
 
 .dvclass{
     background-color: #131313;
-    border: 2px solid #ccc;
+    border: 2px solid var(--color-title);
     width: 30vw;
     margin: 1em auto;
     border-radius: 8px;
@@ -867,7 +888,7 @@ h2 {
 
 .profClass{
     background-color: #131313;
-    border: 2px solid #ccc;
+    border: 2px solid var(--color-title);
     width: 30vw;
     margin: 0 auto;
     margin-top: 1em;
@@ -886,7 +907,7 @@ h2 {
     flex: 0 0 calc(50% - 2em); /* Faz com que as habilidades ocupem metade do contêiner com um espaçamento de 20px entre elas */
     background-color: #131313;
     padding: 1em;
-    border: 1px solid #ccc;
+    border: 1px solid var(--color-title);
     border-radius: 8px;
 }
 
@@ -900,5 +921,16 @@ h2 {
     transition: opacity 0.5s ease; /* Adiciona uma transição suave de opacidade */
 }
 
+.equipamento{
+    background-color: #131313;
+    border: 2px solid var(--color-title);
+    width: 30vw;
+    margin: 1em auto;
+    border-radius: 8px;
+}
+
+.equipamento h2{
+    margin-top: 1em;
+}
 
 /* #endregion */
